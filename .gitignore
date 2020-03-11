@@ -1,0 +1,12 @@
+# general
+.swp
+log/
+out/
+bin/
+build/
+
+# Mac
+.DS_Store
+
+# VSCode
+.vscode/
