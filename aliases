@@ -1,0 +1,26 @@
+project_dir=$HOME/Documents/projects
+
+alias ll='ls -al'
+alias startssh='python3 $project_dir/infra_scripts/start_cluster_on_iterm/startssh.py  --tmux'
+alias pj='jq . <<< '
+alias pwgen=pw_generator
+
+pw_generator()
+{
+  if [ "$#" -ne "2" ]; then
+    echo "Pw Generator should have 2 args: byte_count, pw_count."
+    return 1
+  fi
+
+  byte_count=$1
+  pw_count=$2
+  if [ "$byte_count" -lt 18 ]; then
+    echo "Password length should at least 18 bytes."
+    return 1
+  fi
+  for (( i=0; i < $pw_count; i++ ));
+  do
+    head -c $byte_count /dev/urandom | base64
+  done
+
+}

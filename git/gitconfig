@@ -1,0 +1,21 @@
+[core]
+	excludesfile = $HOME/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = eriksuen
+	email = eriksuen@cryptoblk.io
+[commit]
+	template = $HOME/.stCommitMsg
+[alias]
+  co = checkout
+  br = !git -P branch
+  cmm = commit -m
+  me = merge --log --no-edit
+  st = status -s -uall 
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit  --date=relative --remotes --branches --date-order

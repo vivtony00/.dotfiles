@@ -1,9 +1,37 @@
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.bashrc: bashrc
-    ~/.bash_aliases: bash_aliases
-    ~/.tmux.conf: tmux.conf
-    ~/.zshrc: zshrc
+    ~/.gitconfig: git/gitconfig
+    ~/.aliases: aliases
+    ~/.bashrc: bash/bashrc
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux/:
+      create: true
+      glob: true
+      path: tmux/.tmux/*.tmux
+    ~/.zshrc: zsh/zshrc
 
-
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [sudo chsh -s $(which zsh) $(whoami), Making zsh the default shell]
+    - [
+        test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)",
+        Installing oh-my-zsh,
+      ]
+    - [
+        test -d ~/.zsh/zsh-autosuggestions || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions,
+        Installing zsh-autosuggestion,
+      ]
+    - [
+        command -v fzf >/dev/null 2>&1 || (brew install fzf z; /usr/local/opt/fzf/install --all;),
+        Installing fzf and z,
+      ]
+    - [
+        test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm,
+        Installing Tmux Plugin Manager,
+      ]
+    - [
+        tmux start-server; tmux new-session -d; ~/.tmux/plugins/tpm/scripts/install_plugins.sh; tmux kill-server;,
+        Installing other plugins for Tmux,
+      ]
