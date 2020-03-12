@@ -5,9 +5,13 @@ BASEDIR=$(dirname "$0")
 cd $BASEDIR
 
 # brew bundle dump
+which brew
 cd ../brew_bundle
 brew bundle dump -f
+/usr/local/bin/brew bundle dump -f
 cd -
+
+which git
 
 # git commit
 git add .
