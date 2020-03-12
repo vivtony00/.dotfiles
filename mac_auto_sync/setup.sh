@@ -12,4 +12,3 @@ chmod +x auto_commit_push.sh
 cp com.eriksuen.autosync_dotfiles.plist ~/Library/LaunchAgents
 
 launchctl load -w ~/Library/LaunchAgents/com.eriksuen.autosync_dotfiles.plist
-
