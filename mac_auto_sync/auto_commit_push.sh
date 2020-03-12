@@ -5,10 +5,9 @@ BASEDIR=$(dirname "$0")
 cd $BASEDIR
 
 # brew bundle dump
-pushd
 cd ../brew_bundle
 brew bundle dump -f
-popd
+cd -
 
 # git commit
 git add .
