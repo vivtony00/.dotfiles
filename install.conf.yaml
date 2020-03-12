@@ -35,3 +35,7 @@
         tmux start-server; tmux new-session -d; ~/.tmux/plugins/tpm/scripts/install_plugins.sh; tmux kill-server;,
         Installing other plugins for Tmux,
       ]
+    - command: bash -c mac_auto_sync/setup.sh
+      stdout: true
+      stderr: true
+      description: Setup Auto Sync for dotfiles
