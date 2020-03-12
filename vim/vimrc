@@ -1,0 +1,13 @@
+" theme
+syntax on
+color monokai
+" basic layout
+set ruler
+set colorcolumn=51,81,100
+set tabstop=2
+set expandtab
+" relative line number
+set relativenumber
+set rnu
+" enable mouse mode
+set mouse=a
