@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.eriksuen.autosync_dotfiles</string>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>fswatch -0 ~/.dotfiles | xargs -0 -n 1 bash ~/.dotfiles/mac_auto_sync/auto_commit_push.sh</string>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/dotfiles_autosync.out</string>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/dotfiles_autosync.err</string>
+
+</dict>
+</plist>
