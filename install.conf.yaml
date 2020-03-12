@@ -14,7 +14,10 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [sudo chsh -s $(which zsh) $(whoami), Making zsh the default shell]
+    - [
+        test -d ~/.oh-my-zsh || sudo chsh -s $(which zsh) $(whoami),
+        Making zsh the default shell,
+      ]
     - [
         test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)",
         Installing oh-my-zsh,

@@ -5,14 +5,27 @@
   <key>Label</key>
   <string>com.eriksuen.autosync_dotfiles</string>
 
-  <key>KeepAlive</key>
+  <key>RunAtLoad</key>
   <true/>
 
   <key>ProgramArguments</key>
   <array>
-    <string>fswatch -0 ~/.dotfiles | xargs -0 -n 1 bash ~/.dotfiles/mac_auto_sync/auto_commit_push.sh</string>
+    <string>bash ~/.dotfiles/mac_auto_sync/auto_commit_push.sh</string>
   </array>
-
+  <key>StartInterval</key>
+  <integer>60</integer>
+  <!-- <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key>
+            <integer>1</integer>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <string>58</string>
+        </dict>
+    </array> -->
+ 
   <key>StandardOutPath</key>
   <string>/tmp/dotfiles_autosync.out</string>
 
