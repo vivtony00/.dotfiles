@@ -1,7 +1,7 @@
 project_dir=$HOME/Documents/projects
 
 alias ll='ls -al'
-alias startssh='python3 $project_dir/infra_scripts/start_cluster_on_iterm/startssh.py  --tmux'
+alias startssh='python3 $project_dir/infra_scripts/scripts/start_ssh_cluster/startssh.py  --tmux'
 alias pj='jq . <<< '
 alias pwgen=pw_generator
 

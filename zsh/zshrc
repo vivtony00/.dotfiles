@@ -121,3 +121,6 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 . /usr/local/etc/profile.d/z.sh
 # pyenv init
 eval "$(pyenv init -)"
+# auto-complete for kubectl
+source <(kubectl completion zsh)
+

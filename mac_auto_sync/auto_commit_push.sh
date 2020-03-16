@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\n[$(date)] Triggering Auto Sync Dotfiles"
+echo "\n [$(date)] Triggering Auto Sync Dotfiles"
 BASEDIR=$(dirname "$0")
 cd $BASEDIR
 
