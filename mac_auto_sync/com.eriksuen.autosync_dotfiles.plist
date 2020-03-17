@@ -14,16 +14,14 @@
     <string>-c</string>
     <string>~/.dotfiles/mac_auto_sync/auto_commit_push.sh</string>
   </array>
-  <!-- <key>StartCalendarInterval</key>
+  
+  <key>StartCalendarInterval</key>
     <array>
         <dict>
             <key>Hour</key>
             <integer>15</integer>
         </dict>
-  </array> -->
-
-  <key>StartInterval</key>
-  <integer>20</integer>	
+  </array>
 
   <key>EnvironmentVariables</key>
   <dict>
