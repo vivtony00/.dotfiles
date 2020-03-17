@@ -6,6 +6,8 @@ cd $BASEDIR
 
 # brew bundle dump
 cd ../brew_bundle
+echo $PATH
+echo $HOME
 /usr/local/bin/brew bundle dump -f --global
 cd -
 
