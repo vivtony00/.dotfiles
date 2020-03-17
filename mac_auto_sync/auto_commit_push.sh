@@ -6,7 +6,7 @@ cd $BASEDIR
 
 # brew bundle dump
 cd ../brew_bundle
-/usr/local/bin/brew bundle dump -f --mas
+/usr/local/bin/brew bundle dump -f --global
 cd -
 
 # git commit
