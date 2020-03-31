@@ -429,18 +429,20 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>45 83 224 275 0 0 1440 877 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>343 321 799 448 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>590 66 850 728 0 0 1440 877 </string>
+	<string>45 0 1395 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>440 98 850 728 0 0 1440 877 </string>
+	<string>2357 -116 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2076 -119 1389 864 1440 -180 1920 1057 </string>
+	<string>2612 -100 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2172 -33 850 728 1440 -180 1920 1057 </string>
+	<string>2373 -50 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2003 -55 1270 932 1440 -180 1920 1057 </string>
+	<string>1878 29 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>1555 36 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -1638,9 +1640,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>6E2A074B-927D-4990-8FCB-71A042E7AB11</string>
 	<key>NoSyncLastTipTime</key>
-	<real>605635026.07877803</real>
+	<real>606228172.77254605</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>13</integer>
+	<integer>17</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2372,9 +2374,15 @@
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>604840363.60694802</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
+		<string>0001</string>
 		<string>000</string>
+		<string>0002</string>
+		<string>0000</string>
+		<string>0003</string>
 	</array>
 	<key>OpenBookmark</key>
 	<false/>
@@ -2426,10 +2434,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-11T08:29:55Z</date>
+	<date>2020-03-30T07:35:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
