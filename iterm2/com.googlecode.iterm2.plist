@@ -4,6 +4,8 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -434,19 +436,19 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>343 321 799 448 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>45 0 1395 877 0 0 1440 877 </string>
+	<string>1710 -36 1291 830 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2357 -116 850 728 1440 -180 1920 1057 </string>
+	<string>1722 -21 1305 898 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2612 -100 850 728 1440 -180 1920 1057 </string>
+	<string>1653 -71 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2373 -50 850 728 1440 -180 1920 1057 </string>
+	<string>1479 149 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1878 29 850 728 1440 -180 1920 1057 </string>
+	<string>1520 30 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>1555 36 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>680 149 850 728 0 0 1440 877 </string>
+	<string>1601 -94 850 728 1440 -180 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1642,7 +1644,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>606228172.77254605</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>17</integer>
+	<integer>18</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2434,7 +2436,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-30T07:35:13Z</date>
+	<date>2020-04-02T09:14:16Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
