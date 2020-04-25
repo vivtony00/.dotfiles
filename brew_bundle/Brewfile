@@ -62,6 +62,7 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "webex-meetings"
+cask "wireshark"
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Microsoft Remote Desktop", id: 1295203466
