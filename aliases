@@ -24,3 +24,24 @@ pw_generator()
   done
 
 }
+
+#############################
+### aws related quick script
+#############################
+aws_whoami()
+{
+  aws sts get-caller-identity
+}
+
+aws_assume_role()
+{
+  # example to use:
+  # aws_assume_role "arn:aws:iam::073854545754:role/AccountAccessRole"
+  role_arn=$1
+  result=$(aws sts assume-role --role-arn $role_arn --role-session-name AWSCLI-Session)
+  export AWS_ACCESS_KEY_ID=$(echo $result | jq '.Credentials.AccessKeyId' | tr -d '"')
+  export AWS_SECRET_ACCESS_KEY=$(echo $result | jq '.Credentials.SecretAccessKey' | tr -d '"')
+  export AWS_SESSION_TOKEN=$(echo $result | jq '.Credentials.SessionToken' | tr -d '"')
+
+  aws_whoami
+}
