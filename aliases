@@ -45,3 +45,8 @@ aws_assume_role()
 
   aws_whoami
 }
+
+###############################
+### vault related quick script
+###############################
+export VAULT_ADDR=https://vault.office.cryptoblk.io/
