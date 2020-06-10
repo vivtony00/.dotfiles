@@ -435,20 +435,34 @@
 	<string>45 83 224 275 0 0 1440 877 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>343 321 799 448 0 0 1440 877 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2410 227 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1710 -36 1291 830 1440 -180 1920 1057 </string>
+	<string>2947 -703 850 728 1440 -540 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1722 -21 1305 898 1440 -180 1920 1057 </string>
+	<string>222 81 1270 796 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 10</key>
+	<string>2434 -161 850 728 1440 -180 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 11</key>
+	<string>1939 149 850 728 1440 -180 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 12</key>
+	<string>1781 -180 1312 813 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1653 -71 850 728 1440 -180 1920 1057 </string>
+	<string>487 82 850 728 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1479 149 850 728 1440 -180 1920 1057 </string>
+	<string>66 136 850 728 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1520 30 850 728 1440 -180 1920 1057 </string>
+	<string>44 146 850 728 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>1555 36 850 728 1440 -180 1920 1057 </string>
+	<string>45 149 850 728 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>1601 -94 850 728 1440 -180 1920 1057 </string>
+	<string>381 47 850 728 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 7</key>
+	<string>1483 -102 850 728 1440 -180 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 8</key>
+	<string>628 149 850 728 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 9</key>
+	<string>1931 81 850 728 1440 -180 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1644,7 +1658,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>606228172.77254605</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>18</integer>
+	<integer>24</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2436,9 +2450,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-02T09:14:16Z</date>
+	<date>2020-06-09T06:49:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>2212615384</integer>
+	<key>SUUpdateRelaunchingMarker</key>
+	<true/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -2447,6 +2465,8 @@
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.3.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
