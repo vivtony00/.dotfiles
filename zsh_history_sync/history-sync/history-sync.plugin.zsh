@@ -29,6 +29,9 @@ function _print_git_error_msg() {
 function history_sync_pull() {
     DIR=$(pwd)
 
+    # create history file if empty
+    test -e $ZSH_HISTORY_FILE || touch $ZSH_HISTORY_FILE
+
     # Backup
     cp -av "$ZSH_HISTORY_FILE" "$ZSH_HISTORY_FILE.backup" 1>&2
 
