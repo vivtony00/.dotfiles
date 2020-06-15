@@ -41,11 +41,10 @@ function history_sync_pull() {
     fi
 
     ## Decrypt should be performed by git-crypt automatically
-
+    
     # Merge
-    cat "$ZSH_HISTORY_FILE" "$ZSH_HISTORY_FILE_DECRYPT_NAME" | awk '/:[0-9]/ { if(s) { print s } s=$0 } !/:[0-9]/ { s=s"\n"$0 } END { print s }' | LC_ALL=C sort -u > /tmp/.zsh_history
+    cat "$ZSH_HISTORY_FILE" "$ZSH_HISTORY_FILE_ENC" | awk '/:[0-9]/ { if(s) { print s } s=$0 } !/:[0-9]/ { s=s"\n"$0 } END { print s }' | LC_ALL=C sort -u > /tmp/.zsh_history
     mv /tmp/.zsh_history $ZSH_HISTORY_FILE
-    rm  "$ZSH_HISTORY_FILE_DECRYPT_NAME"
     cd  "$DIR"
 }
 
