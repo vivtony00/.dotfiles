@@ -54,13 +54,13 @@ function history_sync_push() {
     # cp for git-cyrpt
     cp $ZSH_HISTORY_FILE $ZSH_HISTORY_FILE_ENC
     DIR=$(pwd)
-    cd "$ZSH_HISTORY_PROJ" && "$GIT" add * && "$GIT" commit -m "$GIT_COMMIT_MSG"
+    cd "$ZSH_HISTORY_PROJ" && "$GIT" add * && "$GIT" commit -m "$GIT_COMMIT_MSG"  1>&2
     if [[ "$?" != 0 ]]; then
         _print_git_error_msg
         cd "$DIR"
         return
     fi
-    "$GIT" push
+    "$GIT" push 1>&2
     if [[ "$?" != 0 ]]; then
         _print_git_error_msg
         cd "$DIR"
