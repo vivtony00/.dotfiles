@@ -13,3 +13,5 @@ build/
 
 # dotfile
 tmux/.tmux/plugins/
+
+secret-key

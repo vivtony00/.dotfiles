@@ -9,6 +9,9 @@ cd ../brew_bundle
 brew bundle dump -f
 cd -
 
+# zsh_history sync
+zhsync
+
 # git commit
 cd ../
 git add .

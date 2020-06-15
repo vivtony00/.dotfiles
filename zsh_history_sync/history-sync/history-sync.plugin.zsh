@@ -40,13 +40,7 @@ function history_sync_pull() {
         return
     fi
 
-    # Decrypt
-    "$GPG" --output "$ZSH_HISTORY_FILE_DECRYPT_NAME" --decrypt "$ZSH_HISTORY_FILE_ENC"
-    if [[ "$?" != 0 ]]; then
-        _print_gpg_decrypt_error_msg
-        cd "$DIR"
-        return
-    fi
+    ## Decrypt should be performed by git-crypt automatically
 
     # Merge
     cat "$ZSH_HISTORY_FILE" "$ZSH_HISTORY_FILE_DECRYPT_NAME" | awk '/:[0-9]/ { if(s) { print s } s=$0 } !/:[0-9]/ { s=s"\n"$0 } END { print s }' | LC_ALL=C sort -u > /tmp/.zsh_history
@@ -56,13 +50,21 @@ function history_sync_pull() {
 }
 
 # Encrypt and push current history to master
-
-# Encrypt and push current history to master
 function history_sync_push() {
     # cp for git-cyrpt
     cp $ZSH_HISTORY_FILE $ZSH_HISTORY_FILE_ENC
     DIR=$(pwd)
     cd "$ZSH_HISTORY_PROJ" && "$GIT" add * && "$GIT" commit -m "$GIT_COMMIT_MSG"
+    if [[ "$?" != 0 ]]; then
+        _print_git_error_msg
+        cd "$DIR"
+        return
+    fi
     "$GIT" push
+    if [[ "$?" != 0 ]]; then
+        _print_git_error_msg
+        cd "$DIR"
+        return
+    fi
     cd $DIR
 }
