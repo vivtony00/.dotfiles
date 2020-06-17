@@ -10,7 +10,7 @@
 
   <key>ProgramArguments</key>
   <array>
-    <string>bash</string>
+    <string>zsh</string>
     <string>-c</string>
     <string>~/.dotfiles/mac_auto_sync/auto_commit_push.sh</string>
   </array>
