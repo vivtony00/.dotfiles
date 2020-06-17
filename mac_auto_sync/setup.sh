@@ -13,4 +13,5 @@ cp com.eriksuen.autosync_dotfiles.plist ~/Library/LaunchAgents
 
 sed -i "" "s;\$PATH;${PATH};g" ~/Library/LaunchAgents/com.eriksuen.autosync_dotfiles.plist
 
+launchctl unload -w ~/Library/LaunchAgents/com.eriksuen.autosync_dotfiles.plist
 launchctl load -w ~/Library/LaunchAgents/com.eriksuen.autosync_dotfiles.plist
