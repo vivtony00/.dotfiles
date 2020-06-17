@@ -10,6 +10,7 @@ brew bundle dump -f
 cd -
 
 # zsh_history sync
+source ~/.zshrc
 zhsync
 
 # git commit
