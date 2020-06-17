@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/zsh
 
 printf "\n[$(date)] Triggering Auto Sync Dotfiles..\n"
 BASEDIR=$(dirname "$0")
@@ -10,7 +10,6 @@ brew bundle dump -f
 cd -
 
 # zsh_history sync
-source ~/.zshrc
 zhsync
 
 # git commit
