@@ -11,6 +11,7 @@
   <key>ProgramArguments</key>
   <array>
     <string>zsh</string>
+    <string>-i</string>
     <string>-c</string>
     <string>~/.dotfiles/mac_auto_sync/auto_commit_push.sh</string>
   </array>
