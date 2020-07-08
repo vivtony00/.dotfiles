@@ -50,3 +50,10 @@ aws_assume_role()
 ### vault related quick script
 ###############################
 export VAULT_ADDR=https://vault.office.cryptoblk.io/
+
+sign_ssh()
+{
+  level=$1
+  proj=$2
+  python3 $project_dir/cblk_vault/vltbuild/vaultcmd.py ssh -l $level -p $proj
+}
