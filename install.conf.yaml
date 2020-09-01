@@ -11,10 +11,6 @@
       glob: true
       path: tmux/.tmux/*.tmux
     ~/.zshrc: zsh/zshrc
-    ~/.vim/colors:
-      create: true
-      glob: true
-      path: vim/colors/*.vim
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [
@@ -26,7 +22,7 @@
         Installing oh-my-zsh,
       ]
     - [
-        test -d ~/.zsh/zsh-autosuggestions || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions,
+        test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions,
         Installing zsh-autosuggestion,
       ]
     - [
@@ -45,14 +41,6 @@
         tmux start-server; tmux new-session -d; ~/.tmux/plugins/tpm/scripts/install_plugins.sh; tmux kill-server;,
         Installing other plugins for Tmux,
       ]
-    # - [
-    #     which brew || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)",
-    #     Install brew,
-    #   ]
-    # - [
-    #     brew update && brew bundle install --file ./brew_bundle/Brewfile,
-    #     Install packages with brew,
-    #   ]
     - command: bash -c mac_auto_sync/setup.sh
       stdout: true
       stderr: true
