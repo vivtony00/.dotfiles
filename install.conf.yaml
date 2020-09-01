@@ -11,16 +11,8 @@
       glob: true
       path: tmux/.tmux/*.tmux
     ~/.zshrc: zsh/zshrc
-
+    ~/.vimrc: vim/vimrc
 - shell:
-    - [
-        which brew || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)",
-        Install brew,
-      ]
-    - [
-        brew update && brew bundle install --file ./brew_bundle/Brewfile,
-        Install packages with brew,
-      ]
     - [git submodule update --init --recursive, Installing submodules]
     - [
         test -d ~/.oh-my-zsh || sudo chsh -s $(which zsh) $(whoami),
@@ -50,6 +42,14 @@
         tmux start-server; tmux new-session -d; ~/.tmux/plugins/tpm/scripts/install_plugins.sh; tmux kill-server;,
         Installing other plugins for Tmux,
       ]
+    # - [
+    #     which brew || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)",
+    #     Install brew,
+    #   ]
+    # - [
+    #     brew update && brew bundle install --file ./brew_bundle/Brewfile,
+    #     Install packages with brew,
+    #   ]
     - command: bash -c mac_auto_sync/setup.sh
       stdout: true
       stderr: true

@@ -9,6 +9,7 @@ type fswatch > /dev/null 2>&1 || brew install fswatch
 
 chmod +x auto_commit_push.sh
 
+mkdir -p ~/Library/LaunchAgents
 cp com.eriksuen.autosync_dotfiles.plist ~/Library/LaunchAgents
 
 sed -i "" "s;\$PATH;${PATH};g" ~/Library/LaunchAgents/com.eriksuen.autosync_dotfiles.plist
