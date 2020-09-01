@@ -13,6 +13,14 @@
     ~/.zshrc: zsh/zshrc
 
 - shell:
+    - [
+        which brew || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)",
+        Install brew,
+      ]
+    - [
+        brew update && brew bundle install --file ./brew_bundle/Brewfile,
+        Install packages with brew,
+      ]
     - [git submodule update --init --recursive, Installing submodules]
     - [
         test -d ~/.oh-my-zsh || sudo chsh -s $(which zsh) $(whoami),
