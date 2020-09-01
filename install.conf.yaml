@@ -11,7 +11,10 @@
       glob: true
       path: tmux/.tmux/*.tmux
     ~/.zshrc: zsh/zshrc
-    ~/.vimrc: vim/vimrc
+    ~/.vim/colors:
+      create: true
+      glob: true
+      path: vim/colors/*.vim
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [
