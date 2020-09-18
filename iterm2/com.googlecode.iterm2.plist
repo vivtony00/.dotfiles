@@ -16,6 +16,13 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>Coprocess MRU</key>
+	<array>
+		<string>ssh root@10.0.0.4</string>
+		<string>ssh root@10.0.0.3</string>
+		<string>ssh root@10.0.0.2</string>
+		<string>ssh root@10.0.0.1</string>
+	</array>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Monokai Remastered</key>
@@ -440,9 +447,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>432 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2231 24 850 751 1440 -540 2560 1417 </string>
+	<string>149 139 850 728 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>254 62 850 728 0 0 1440 877 </string>
+	<string>2176 -253 850 728 1440 -540 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
 	<string>2434 -161 850 728 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 11</key>
@@ -1635,6 +1642,10 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
+	<array>
+		<string>ssh root@10.0.0.1</string>
+	</array>
 	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
@@ -1649,9 +1660,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
+		<string>{{1440, -540}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{104, 761}</string>
+		<string>{1771, 264}</string>
 	</dict>
 	<key>NoSyncInstallUtilitiesPackage</key>
 	<true/>
@@ -1662,7 +1673,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>606228172.77254605</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>36</integer>
+	<integer>38</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2127,6 +2138,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.titleOverrideFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.tty</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2454,7 +2473,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-16T07:53:16Z</date>
+	<date>2020-09-17T07:50:41Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>

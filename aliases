@@ -1,7 +1,6 @@
 project_dir=$HOME/Documents/projects
 
 alias ll='ls -al'
-alias startssh='python3 $project_dir/infra_scripts/scripts/start_ssh_cluster/startssh.py  --tmux --project_root $project_dir'
 alias pj='jq . <<< '
 alias pwgen=pw_generator
 alias terraform13='/usr/local/opt/terraform/bin/terraform'
@@ -25,6 +24,11 @@ pw_generator()
   done
 
 }
+
+#############################
+### devops-cli related
+#############################
+export PROJECT_ROOT=$project_dir
 
 #############################
 ### aws related quick script
