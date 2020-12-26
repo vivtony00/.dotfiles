@@ -5,24 +5,14 @@ alias pj='jq . <<< '
 alias pwgen=pw_generator
 alias terraform13='/usr/local/opt/terraform/bin/terraform'
 
-pw_generator()
-{
-  if [ "$#" -ne "2" ]; then
-    echo "Pw Generator should have 2 args: byte_count, pw_count."
-    return 1
-  fi
-
-  byte_count=$1
-  pw_count=$2
-  if [ "$byte_count" -lt 18 ]; then
-    echo "Password length should at least 18 bytes."
-    return 1
-  fi
-  for (( i=0; i < $pw_count; i++ ));
-  do
-    head -c $byte_count /dev/urandom | base64
-  done
-
+pw_generator () {
+        char_count=${1:-16} # default 16 if missing
+        pw_count=${2:-10}   # default 10 if missing
+        
+        for value in {1..$pw_count} 
+        do
+          echo $(head /dev/urandom | LC_ALL=C tr -dc A-Za-z0-9 | head -c $char_count)
+        done
 }
 
 #############################
