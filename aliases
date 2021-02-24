@@ -3,7 +3,6 @@ project_dir=$HOME/Documents/projects
 alias ll='ls -al'
 alias pj='jq . <<< '
 alias pwgen=pw_generator
-alias terraform13='/usr/local/opt/terraform/bin/terraform'
 
 pw_generator () {
         char_count=${1:-16} # default 16 if missing
