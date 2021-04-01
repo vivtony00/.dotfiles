@@ -52,3 +52,11 @@ sign_ssh()
   vault token lookup > /dev/null 2>&1 || vault login -method=oidc
   python3 $project_dir/cblk_vault/vltbuild/vaultcmd.py ssh -l $level -p $proj
 }
+
+###############################
+### Android SDK related
+###############################
+export ANDROID_HOME=/Users/eriksuen/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/eriksuen/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
