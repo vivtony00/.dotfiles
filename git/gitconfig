@@ -9,7 +9,7 @@
 	trustExitCode = true
 [user]
 	name = eriksuen
-	email = eriksuen@cryptoblk.io
+	email = suenfung2005@gmail.com
 [commit]
 	template = $HOME/.stCommitMsg
 [alias]

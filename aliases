@@ -43,7 +43,8 @@ aws_assume_role()
 ###############################
 ### vault related quick script
 ###############################
-export VAULT_ADDR=https://vault.office.cryptoblk.io/
+export VAULT_ADDR=
+## https://vault.office.cryptoblk.io/
 
 sign_ssh()
 {
