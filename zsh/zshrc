@@ -123,11 +123,8 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# source z
-. /usr/local/etc/profile.d/z.sh
+
 # pyenv init
 eval "$(pyenv init -)"
 # auto-complete for kubectl
 source <(kubectl completion zsh)
-
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"

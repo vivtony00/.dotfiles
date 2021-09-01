@@ -1,7 +1,7 @@
-project_dir=$HOME/Documents/projects
+project_dir=$HOME/project
 
-alias ll='ls -al'
-alias pj='jq . <<< '
+# alias ll='ls -al'
+# alias pj='jq . <<< '
 alias pwgen=pw_generator
 
 pw_generator () {
@@ -39,25 +39,3 @@ aws_assume_role()
 
   aws_whoami
 }
-
-###############################
-### vault related quick script
-###############################
-export VAULT_ADDR=
-## https://vault.office.cryptoblk.io/
-
-sign_ssh()
-{
-  level=$1
-  proj=$2
-  vault token lookup > /dev/null 2>&1 || vault login -method=oidc
-  python3 $project_dir/cblk_vault/vltbuild/vaultcmd.py ssh -l $level -p $proj
-}
-
-###############################
-### Android SDK related
-###############################
-export ANDROID_HOME=/Users/eriksuen/Library/Android/sdk
-export ANDROID_SDK_ROOT=/Users/eriksuen/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools

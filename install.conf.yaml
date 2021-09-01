@@ -1,47 +1,47 @@
 - clean: ["~"]
 
 - link:
-    ~/.gitconfig: git/gitconfig
+    # ~/.gitconfig: git/gitconfig
     ~/.aliases: aliases
     ~/.bashrc: bash/bashrc
     ~/.bash_aliases: bash/bash_aliases
-    ~/.tmux.conf: tmux/tmux.conf
-    ~/.tmux/:
-      create: true
-      glob: true
-      path: tmux/.tmux/*.tmux
-    ~/.zshrc: zsh/zshrc
+    # ~/.tmux.conf: tmux/tmux.conf
+    # ~/.tmux/:
+    #   create: true
+    #   glob: true
+    #   path: tmux/.tmux/*.tmux
+    # ~/.zshrc: zsh/zshrc
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
-    - [
-        test -d ~/.oh-my-zsh || sudo chsh -s $(which zsh) $(whoami),
-        Making zsh the default shell,
-      ]
-    - [
-        test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)",
-        Installing oh-my-zsh,
-      ]
-    - [
-        test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions,
-        Installing zsh-autosuggestion,
-      ]
-    - [
-        test -d ~/.oh-my-zsh/plugins/history-sync || ~/.dotfiles/zsh_history_sync/setup.sh,
-        Installing zsh-history-sync,
-      ]
-    - [
-        command -v fzf >/dev/null 2>&1 || (brew install fzf z; /usr/local/opt/fzf/install --all;),
-        Installing fzf and z,
-      ]
-    - [
-        test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm,
-        Installing Tmux Plugin Manager,
-      ]
-    - [
-        tmux start-server; tmux new-session -d; ~/.tmux/plugins/tpm/scripts/install_plugins.sh; tmux kill-server;,
-        Installing other plugins for Tmux,
-      ]
-    - command: bash -c mac_auto_sync/setup.sh
+    - description: Installing brew
+      command: command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+      stdin: true
       stdout: true
-      stderr: true
-      description: Setup Auto Sync for dotfiles
+
+    - description: Installing submodules
+      command: git submodule update --init --recursive
+
+    - description: Installing oh-my-zsh
+      command: test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+      
+    - description: Installing zsh-autosuggestion
+      command: test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions,
+        
+    - description: Installing fzf and z
+      command: command -v fzf >/dev/null 2>&1 || (brew install fzf z; $(brew --prefix)/opt/fzf/install --all;)
+        
+    # - [
+    #     test -d ~/.oh-my-zsh/plugins/history-sync || ~/.dotfiles/zsh_history_sync/setup.sh,
+    #     Installing zsh-history-sync,
+    #   ]
+    # - [
+    #     test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm,
+    #     Installing Tmux Plugin Manager,
+    #   ]
+    # - [
+    #     tmux start-server; tmux new-session -d; ~/.tmux/plugins/tpm/scripts/install_plugins.sh; tmux kill-server;,
+    #     Installing other plugins for Tmux,
+    #   ]
+    # - command: bash -c mac_auto_sync/setup.sh
+    #   stdout: true
+    #   stderr: true
+    #   description: Setup Auto Sync for dotfiles
