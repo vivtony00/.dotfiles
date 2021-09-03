@@ -10,7 +10,14 @@
     #   create: true
     #   glob: true
     #   path: tmux/.tmux/*.tmux
-    # ~/.zshrc: zsh/zshrc
+    ~/.zshrc: 
+      relink: true
+      force: true
+      path: zsh/zshrc
+    ~/.p10k.zsh: 
+      relink: true
+      force: true
+      path: zsh/p10k.zsh
 - shell:
     - description: Installing brew
       command: command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
@@ -22,6 +29,10 @@
 
     - description: Installing oh-my-zsh
       command: test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+    - description: Installing zsh-theme power level 10k
+      command: |
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
       
     - description: Installing zsh-autosuggestion
       command: test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions,
