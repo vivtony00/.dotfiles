@@ -7,51 +7,36 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "rigellute/tap"
 brew "openssl@1.1"
-brew "ansible"
 brew "azure-cli"
 brew "openjdk"
 brew "bfg"
 brew "glib"
 brew "cocoapods"
+brew "nvm"
+brew "wget"
+brew "coreutils"
 
 brew "fswatch"
 
 brew "git"
 
-brew "helm"
 brew "jq"
 
 brew "kubernetes-cli"
+brew "helm"
 
 brew "libfido2"
 
-brew "terraform@0.12"
-bbrew "tfenv"
-brew "tldr"
-brew "tmux"
-brew "vault"
-brew "vim"
-brew "watch"
-brew "wget"
-brew "wireguard-tools"
-brew "z"
-brew "zsh"
-brew "zsh-completions"
-brew "zsh-syntax-highlighting"
-brew "derailed/k9s/k9s"
-brew "rigellute/tap/spotify-tui"
-cask "adoptopenjdk8"
+brew "terraform@1.1.6"
+brew "tfenv"
+
 cask "dbeaver-community"
 cask "discord"
 cask "docker"
 cask "dropbox"
-cask "figma"
-cask "firefox"
-cask "font-meslo-lg-nerd-font"
-cask "font-sauce-code-pro-nerd-font"
-cask "google-backup-and-sync"
+
 cask "google-chrome"
-cask "grammarly"
+
 cask "iterm2"
 cask "keepassxc"
 cask "macfuse"
@@ -60,27 +45,10 @@ cask "microsoft-office"
 cask "microsoft-teams"
 cask "notion"
 cask "openvanilla"
-cask "osxfuse"
-cask "postman"
+
 cask "signal"
 cask "sourcetree"
-cask "spotify"
-cask "steam"
-cask "teamviewer"
-cask "telegram"
-cask "telegram-desktop"
 cask "vagrant"
-cask "veracrypt"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "visual-studio-code"
-cask "wireshark"
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Transporter", id: 1450874784
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835

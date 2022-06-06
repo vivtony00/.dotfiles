@@ -4,3 +4,7 @@ export PATH="$PATH:$HOME/Library/Python/3.8/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# solana
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+# sha256sum
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
